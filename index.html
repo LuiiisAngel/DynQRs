@@ -8,7 +8,7 @@
         background-color: lightblue;
         text-align: center;
       }
-
+      
       .lds-ring {
   display: inline-block;
   position: relative;
@@ -49,14 +49,11 @@
 </head>
 <body>
   <script>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbyIowDu7eX3MILuJo5lYKwrvl6o0V4KmNRu9PhtOa_RBkUUHGMLeTCxJ-27xdBgFREs3Q/exec";  //define la variable para buscar la URL del servicio web.
-
+    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxmpr9PrhxFm-BDq7RZ1X6ytsxBC-m72oMHNnaJlEJ33Sm1MQsPZtcgItdbsIhMYSgYdA/exec";
     
-
-    var url = document.location.href;        //Obtiene URL 
-    var k = url.substr(url.lastIndexOf("k=")+2); // Obtiene el parametro k del documento, último valor de l K
+    var url = document.location.href;
+    var k = url.substr(url.lastIndexOf("k=")+2);
     
-
     if(k){
       fetch(AS_URL_BASE+'?k='+k)
       .then(r => r.text())
@@ -70,13 +67,10 @@
       .catch(err => console.log(err))
     }
 
-    //
-    
   </script>
-
-  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-
   
-  </script>  
+  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  
+  
 </body>
 </html>
